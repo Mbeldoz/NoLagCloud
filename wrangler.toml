@@ -1,4 +1,4 @@
-name = "roblox-lua-site"
+name = "nolag"
 main = "./Worker.js"
 compatibility_date = "2026-07-09"
 
