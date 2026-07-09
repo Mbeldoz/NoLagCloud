@@ -1,0 +1,8 @@
+name = "roblox-lua-site"
+main = "./Worker.js"
+compatibility_date = "2026-07-09"
+
+[assets]
+directory = "."
+binding = "ASSETS"
+run_worker_first = true

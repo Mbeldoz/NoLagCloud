@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>No-Lag Roblox Script</title>
+    <meta
+      name="description"
+      content="A lightweight Roblox script built for automation, performance, and multiple game support."
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="No-Lag Hub">
+        <img class="brand-logo" src="/NoLag.webp" alt="" width="42" height="42" />
+        <span>No-Lag</span>
+      </a>
+      <a class="header-link" href="https://discord.gg/Ndzk9kPZmT">Discord</a>
+    </header>
+
+    <main>
+      <section class="hero pixel-panel" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Roblox script hub</p>
+          <h1 id="hero-title">No-Lag Script</h1>
+          <div class="script-snippet" aria-label="Script loader">
+            <span class="script-label">Script :</span>
+            <code id="loader-code">loadstring(game:HttpGet("https://nolag.wtf"))()</code>
+            <button class="copy-button" type="button" data-copy-target="loader-code">
+              Copy
+            </button>
+          </div>
+          <div class="hero-actions">
+            <a class="discord-button" href="https://discord.gg/Ndzk9kPZmT">
+              Join Discord
+            </a>
+          </div>
+        </div>
+        <div class="hero-logo-card" aria-label="No-Lag script logo">
+          <img src="/NoLag.webp" alt="No-Lag logo" />
+          <div class="status-row">
+            <span>Multi-game</span>
+            <span>Low overhead</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">Tools for faster gameplay loops</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Automation Tools</h3>
+            <p>
+              Helps reduce repetitive actions so you can focus on progress,
+              strategy, and the parts of each game that matter most.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Performance-Focused</h3>
+            <p>
+              Optimized to stay lightweight and responsive, with a simple loader
+              that keeps unnecessary overhead out of the way.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Multiple Game Support</h3>
+            <p>
+              Designed as a script hub for supported Roblox games, making it
+              easier to use one trusted place for different experiences.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Easy Setup</h3>
+            <p>
+              Clear access through the community Discord, with updates and
+              support kept in one easy-to-find location.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-section" aria-labelledby="info-title">
+        <div class="info-copy">
+          <p class="eyebrow">Information</p>
+          <h2 id="info-title">Automation that stays smooth</h2>
+          <p>
+            No-Lag Script is designed to help automate repetitive Roblox tasks
+            and improve gameplay efficiency across supported games. It is built
+            with a lightweight approach so the experience stays fast, smooth,
+            and easy to use on desktop and mobile web.
+          </p>
+        </div>
+        <a class="secondary-button" href="https://discord.gg/Ndzk9kPZmT">
+          Get updates on Discord
+        </a>
+      </section>
+    </main>
+    <script>
+      const copyButton = document.querySelector("[data-copy-target]");
+
+      copyButton?.addEventListener("click", async () => {
+        const targetId = copyButton.getAttribute("data-copy-target");
+        const target = document.getElementById(targetId);
+        const text = target?.textContent || "";
+
+        try {
+          await navigator.clipboard.writeText(text);
+          copyButton.textContent = "Copied";
+          setTimeout(() => {
+            copyButton.textContent = "Copy";
+          }, 1400);
+        } catch {
+          copyButton.textContent = "Failed";
+          setTimeout(() => {
+            copyButton.textContent = "Copy";
+          }, 1400);
+        }
+      });
+    </script>
+  </body>
+</html>
